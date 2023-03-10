@@ -6,6 +6,9 @@ export const fakeDataDefaults = {
   Float: 1.14,
   Boolean: true,
   ID: "id",
+  car: {
+    engine: "4.9-liter V8",
+  },
 };
 
 type FakeDataDefaultsType = typeof fakeDataDefaults;
@@ -15,6 +18,7 @@ export type IntType = FakeDataDefaultsType["Int"];
 export type FloatType = FakeDataDefaultsType["Float"];
 export type BooleanType = FakeDataDefaultsType["Boolean"];
 export type IDType = FakeDataDefaultsType["ID"];
+export type CarEngineType = FakeDataDefaultsType["car"]["engine"];
 
 type tests = [
   Expect<Equal<StringType, string>>,
